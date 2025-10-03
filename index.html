@@ -1,320 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helm Charts Repository</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helm Charts Repository</title>
 
-        :root {
-            --primary: #0078d4;
-            --primary-dark: #005a9e;
-            --secondary: #00b294;
-            --accent: #8764b8;
-            --background: #f3f2f1;
-            --surface: #ffffff;
-            --text: #323130;
-            --text-secondary: #605e5c;
-            --border: #edebe9;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--background);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 2rem 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .intro {
-            background: var(--surface);
-            padding: 2rem;
-            margin: 2rem 0;
-            border-left: 4px solid var(--primary);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .charts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .chart-tile {
-            background: var(--surface);
-            padding: 1.5rem;
-            border-left: 4px solid var(--secondary);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .chart-tile:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            border-left-color: var(--primary);
-        }
-
-        .chart-tile:nth-child(3n+1) {
-            border-left-color: var(--primary);
-        }
-
-        .chart-tile:nth-child(3n+2) {
-            border-left-color: var(--secondary);
-        }
-
-        .chart-tile:nth-child(3n+3) {
-            border-left-color: var(--accent);
-        }
-
-        .chart-name {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text);
-        }
-
-        .chart-description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .chart-version {
-            display: inline-block;
-            background: var(--background);
-            padding: 0.25rem 0.75rem;
-            border-radius: 2px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-
-        .loading {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-        }
-
-        .spinner {
-            border: 3px solid var(--border);
-            border-top: 3px solid var(--primary);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        footer {
-            background: var(--surface);
-            padding: 2rem 0;
-            margin-top: 4rem;
-            text-align: center;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--border);
-        }
-
-        .error {
-            background: #fde7e9;
-            color: #a4262c;
-            padding: 1rem;
-            border-left: 4px solid #a4262c;
-            margin: 2rem 0;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .charts-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <!-- GitHub Markdown Style -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css"
+  />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      background-color: #f6f8fa;
+    }
+    .markdown-body {
+      max-width: 900px;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>⎈ Helm Charts Repository</h1>
-            <p class="subtitle">Production-ready Kubernetes applications</p>
-        </div>
-    </header>
+  <article id="content" class="markdown-body">Loading README...</article>
 
-    <main class="container">
-        <div class="intro" id="readme-content">
-            <div class="loading">
-                <div class="spinner"></div>
-                <p>Loading info from README.md...</p>
-            </div>
-        </div>
+  <!-- Load Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Replace <username> and <repo> with your GitHub info
+    const readmeUrl = 'https://raw.githubusercontent.com/<username>/<repo>/main/README.md';
 
-        <section>
-            <h2 style="margin-bottom: 1rem; color: var(--text);">Available Charts</h2>
-            <div class="charts-grid" id="charts-container">
-                <!-- Charts will be loaded here dynamically -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>Helm Charts Repository • Hosted on GitHub Pages</p>
-        </div>
-    </footer>
-
-    <script>
-        // Fetch and parse README.md
-        async function loadReadme() {
-            try {
-                const response = await fetch('README.md');
-                if (!response.ok) throw new Error('Failed to load README.md');
-                
-                const text = await response.text();
-                parseReadme(text);
-            } catch (error) {
-                document.getElementById('readme-content').innerHTML = `
-                    <div class="error">
-                        <strong>Error:</strong> Could not load README.md. Make sure the file exists in your repository root.
-                    </div>
-                `;
-                document.getElementById('charts-container').innerHTML = `
-                    <p style="color: var(--text-secondary);">No charts available.</p>
-                `;
-            }
-        }
-
-        function parseReadme(text) {
-            const lines = text.split('\n');
-            const charts = [];
-            let currentChart = null;
-            let introText = '';
-            let inChartsSection = false;
-
-            for (let i = 0; i < lines.length; i++) {
-                const line = lines[i].trim();
-
-                // Extract intro/description before charts section
-                if (!inChartsSection && line && !line.startsWith('#')) {
-                    introText += line + ' ';
-                }
-
-                // Detect charts section
-                if (line.toLowerCase().includes('chart') && line.startsWith('#')) {
-                    inChartsSection = true;
-                }
-
-                // Parse chart entries (looking for list items or headers)
-                if (inChartsSection) {
-                    // Match patterns like: - **chart-name** - description
-                    // or: ### chart-name
-                    const listMatch = line.match(/^[-*]\s+\*\*(.+?)\*\*\s*[-:]\s*(.+)/);
-                    const headerMatch = line.match(/^###\s+(.+)/);
-                    const versionMatch = line.match(/version[:\s]+([0-9.]+)/i);
-
-                    if (listMatch) {
-                        if (currentChart) charts.push(currentChart);
-                        currentChart = {
-                            name: listMatch[1].trim(),
-                            description: listMatch[2].trim(),
-                            version: ''
-                        };
-                    } else if (headerMatch && !line.toLowerCase().includes('available')) {
-                        if (currentChart) charts.push(currentChart);
-                        currentChart = {
-                            name: headerMatch[1].trim(),
-                            description: '',
-                            version: ''
-                        };
-                    } else if (currentChart && line && !line.startsWith('#')) {
-                        if (versionMatch) {
-                            currentChart.version = versionMatch[1];
-                        } else if (!currentChart.description) {
-                            currentChart.description = line.replace(/^[-*]\s*/, '');
-                        }
-                    }
-                }
-            }
-
-            if (currentChart) charts.push(currentChart);
-
-            // Display intro
-            if (introText.trim()) {
-                document.getElementById('readme-content').innerHTML = `<p>${introText.trim()}</p>`;
-            } else {
-                document.getElementById('readme-content').innerHTML = `
-                    <p>Welcome to our Helm Charts repository. Browse and deploy production-ready Kubernetes applications.</p>
-                `;
-            }
-
-            // Display charts
-            displayCharts(charts);
-        }
-
-        function displayCharts(charts) {
-            const container = document.getElementById('charts-container');
-
-            if (charts.length === 0) {
-                container.innerHTML = `
-                    <p style="color: var(--text-secondary);">
-                        No charts found in README.md. Add your charts in the following format:<br><br>
-                        <code>- **chart-name** - Chart description</code>
-                    </p>
-                `;
-                return;
-            }
-
-            container.innerHTML = charts.map(chart => `
-                <div class="chart-tile">
-                    <div class="chart-name">${escapeHtml(chart.name)}</div>
-                    <div class="chart-description">${escapeHtml(chart.description || 'No description available')}</div>
-                    ${chart.version ? `<span class="chart-version">v${escapeHtml(chart.version)}</span>` : ''}
-                </div>
-            `).join('');
-        }
-
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-
-        // Load README on page load
-        loadReadme();
-    </script>
+    fetch(readmeUrl)
+      .then(res => {
+        if (!res.ok) throw new Error("README not found");
+        return res.text();
+      })
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(err => {
+        document.getElementById('content').innerHTML = "<p style='color:red'>Failed to load README.md</p>";
+        console.error(err);
+      });
+  </script>
 </body>
 </html>
