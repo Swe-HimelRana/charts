@@ -1,0 +1,45 @@
+name: Update Helm Charts Repo
+
+on:
+  push:
+    paths:
+      - 'repo/*.tgz'
+  workflow_dispatch:
+
+jobs:
+  update-charts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.14.0
+
+      - name: Generate available-charts.md
+        run: |
+          echo "| Chart Name | Version | Description |" > available-charts.md
+          echo "|-------------|----------|-------------|" >> available-charts.md
+
+          for chart in repo/*.tgz; do
+            name=$(helm show chart "$chart" | grep '^name:' | awk '{print $2}')
+            version=$(helm show chart "$chart" | grep '^version:' | awk '{print $2}')
+            desc=$(helm show chart "$chart" | grep '^description:' | cut -d':' -f2- | xargs)
+            echo "| $name | $version | $desc |" >> available-charts.md
+          done
+
+      - name: Generate index.yaml inside /repo
+        run: |
+          helm repo index repo --url https://swe-himelrana.github.io/charts/repo/
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "Himel Rana"
+          git config user.email "himel@example.com"
+
+          git add available-charts.md repo/index.yaml
+          git commit -m "Update Helm repo index and chart list" || echo "No changes"
+          git push
