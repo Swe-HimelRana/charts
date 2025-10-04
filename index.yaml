@@ -1,20 +1,9 @@
 apiVersion: v1
 entries:
-  cluster-issuer:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2025-10-04T20:09:33.453499437Z"
-    description: cluster-issuer Helm chart for Kubernetes
-    digest: 8de5ecf5a844d6f5a120f560ac53b28834acd18de780a564813689ce97cf0e43
-    name: cluster-issuer
-    type: application
-    urls:
-    - https://charts.himelrana.com/cluster-issuer-0.3.0.tgz
-    version: 0.3.0
   kitedash:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-04T20:09:33.45370439Z"
+    created: "2025-10-04T20:09:43.07050244Z"
     description: A Helm chart for Kubernetes
     digest: a01e15c7550dc25887dc17fef33f1f1b4ab8e4e1957ccd1bcacf317db4110d9a
     name: kitedash
@@ -25,7 +14,7 @@ entries:
   redis-with-commander:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-04T20:09:33.454047062Z"
+    created: "2025-10-04T20:09:43.070831166Z"
     description: A Helm chart for Redis with Redis Commander
     digest: 53b2828c959d632d209837e1cf1cb678a229f77e58773e3a04999792798f4f87
     maintainers:
@@ -39,7 +28,7 @@ entries:
   traefik-forward-auth:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-04T20:09:33.454269488Z"
+    created: "2025-10-04T20:09:43.071079591Z"
     description: A Helm chart for Kubernetes
     digest: 3fe2363cc311f19420bed4c7fc69ac82875f68db08280de013c019153ef4e29e
     name: traefik-forward-auth
@@ -47,4 +36,4 @@ entries:
     urls:
     - https://charts.himelrana.com/traefik-forward-auth-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-04T20:09:33.453259047Z"
+generated: "2025-10-04T20:09:43.070209863Z"
