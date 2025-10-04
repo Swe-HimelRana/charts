@@ -1,0 +1,33 @@
+name: Update Helm Repo Index
+
+on:
+  push:
+    paths:
+      - '*.tgz'    # Trigger when new chart is added or updated
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Helm
+        uses: azure/setup-helm@v3
+        with:
+          version: v3.19.0  # or your preferred Helm version
+
+      - name: Create/Update index.yaml
+        run: |
+          mkdir -p helm_repo
+          cp charts/*.tgz helm_repo/ || true
+          helm repo index helm_repo --url https://Swe-HimelRana.github.io/charts/
+          
+      - name: Commit and push index.yaml
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add helm_repo/index.yaml
+          git commit -m "Update Helm repo index.yaml" || echo "No changes to commit"
+          git push
