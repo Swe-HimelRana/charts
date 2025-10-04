@@ -13,7 +13,7 @@ Getting Started
 
 To add this repository to your local Helm client:
 
-    helm repo add himel https://charts.himelrana.com
+    helm repo add himel https://charts.himelrana.com/repo
     helm repo update
 
 
