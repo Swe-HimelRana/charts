@@ -31,9 +31,16 @@ jobs:
             echo "| $name | $version | $desc |" >> available-charts.md
           done
 
-      - name: Generate index.yaml
+      # 🧩 Generate index.yaml in root, but reference packages inside /repo/
+      - name: Generate index.yaml in repo root
         run: |
+          helm repo index repo \
+            --url https://charts.himelrana.com/repo \
+            --merge index.yaml || \
           helm repo index repo --url https://charts.himelrana.com/repo
+          
+          # Move index.yaml from repo/ to root
+          mv repo/index.yaml index.yaml
 
       - name: Commit and push updates
         run: |
