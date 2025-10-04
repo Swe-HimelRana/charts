@@ -3,7 +3,7 @@ name: Update Helm Repo Index
 on:
   push:
     paths:
-      - 'reop/*.tgz'    # Trigger when a new chart is added or updated
+      - 'repo/*.tgz'    # Trigger when a new chart is added or updated
 
 jobs:
   update-index:
