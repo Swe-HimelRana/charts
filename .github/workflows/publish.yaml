@@ -33,13 +33,13 @@ jobs:
 
       - name: Generate index.yaml inside /repo
         run: |
-          helm repo index repo --url https://swe-himelrana.github.io/charts/repo/
+          helm repo index repo --url https://charts.himelrana.com/repo
 
       - name: Commit and push updates
         run: |
           git config user.name "Himel Rana"
           git config user.email "himel@example.com"
 
-          git add available-charts.md repo/index.yaml
+          git add available-charts.md index.yaml
           git commit -m "Update Helm repo index and chart list" || echo "No changes"
           git push
