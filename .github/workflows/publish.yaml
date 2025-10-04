@@ -31,7 +31,7 @@ jobs:
             echo "| $name | $version | $desc |" >> available-charts.md
           done
 
-      - name: Generate index.yaml inside /repo
+      - name: Generate index.yaml
         run: |
           helm repo index repo --url https://charts.himelrana.com/repo
 
