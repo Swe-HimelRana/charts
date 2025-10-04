@@ -344,7 +344,7 @@
         <div class="container">
             <p>&copy; 2025 Himel's Helm Charts. All rights reserved.</p>
             <p>
-                <a href="https://github.com/himelrana" target="_blank">GitHub</a> |
+                <a href="https://github.com/Swe-HimelRana" target="_blank">GitHub</a> |
                 <a href="https://himelrana.com" target="_blank">Website</a> |
                 <a href="mailto:contact@himelrana.com">Contact</a>
             </p>
@@ -362,7 +362,7 @@
         async function fetchReadme() {
             const readmeContent = document.getElementById('readme-content');
             try {
-                const response = await fetch('https://raw.githubusercontent.com/himelrana/helm-charts/main/README.md');
+                const response = await fetch('https://raw.githubusercontent.com/Swe-HimelRana/charts/refs/heads/main/README.md');
                 if (!response.ok) throw new Error('Failed to fetch README');
                 const markdown = await response.text();
                 const html = marked.parse(markdown);
@@ -371,7 +371,7 @@
                 readmeContent.innerHTML = `
                     <div style="text-align: center; padding: 2rem; color: #ef4444;">
                         <p><strong>Error loading README</strong></p>
-                        <p>Please visit <a href="https://github.com/himelrana/helm-charts" target="_blank">GitHub repository</a>.</p>
+                        <p>Please visit <a href="https://github.com/Swe-HimelRana/charts" target="_blank">GitHub repository</a>.</p>
                     </div>
                 `;
             }
