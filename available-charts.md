@@ -1,3 +1,3 @@
 | Chart Name | Version | Description |
 |-------------|----------|-------------|
-| traefik-forward-auth | 0.1.0 | A Helm chart for Kubernetes |
+| cert-manager | v1.15.3 | A Helm chart for cert-manager |

@@ -1,5 +1,36 @@
 apiVersion: v1
 entries:
+  cert-manager:
+  - annotations:
+      artifacthub.io/category: security
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/signKey: |
+        fingerprint: 1020CF3C033D4F35BAE1C19E1226061C665DF13E
+        url: https://cert-manager.io/public-keys/cert-manager-keyring-2021-09-20-1020CF3C033D4F35BAE1C19E1226061C665DF13E.gpg
+    apiVersion: v2
+    appVersion: v1.15.3
+    created: "2025-10-05T23:48:48.117890695Z"
+    description: A Helm chart for cert-manager
+    digest: 016e68d9f7083d2c4fd302f951ee6490dbf4cb1ef44cfc06914c39cbfb01d858
+    home: https://cert-manager.io
+    icon: https://raw.githubusercontent.com/cert-manager/community/4d35a69437d21b76322157e6284be4cd64e6d2b7/logo/logo-small.png
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    kubeVersion: '>= 1.22.0-0'
+    maintainers:
+    - email: cert-manager-maintainers@googlegroups.com
+      name: cert-manager-maintainers
+      url: https://cert-manager.io
+    name: cert-manager
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - https://charts.himelrana.com/repo/cert-manager-v1.15.3.tgz
+    version: v1.15.3
   cluster-issuer:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -58,4 +89,4 @@ entries:
     urls:
     - https://charts.himelrana.com/repo/traefik-forward-auth-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-05T23:47:18.845846502Z"
+generated: "2025-10-05T23:48:48.113699933Z"
