@@ -10,7 +10,7 @@ entries:
         url: https://cert-manager.io/public-keys/cert-manager-keyring-2021-09-20-1020CF3C033D4F35BAE1C19E1226061C665DF13E.gpg
     apiVersion: v2
     appVersion: v1.15.3
-    created: "2025-10-05T23:48:48.117890695Z"
+    created: "2025-10-05T23:54:22.799092634Z"
     description: A Helm chart for cert-manager
     digest: 016e68d9f7083d2c4fd302f951ee6490dbf4cb1ef44cfc06914c39cbfb01d858
     home: https://cert-manager.io
@@ -89,4 +89,19 @@ entries:
     urls:
     - https://charts.himelrana.com/repo/traefik-forward-auth-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-05T23:48:48.113699933Z"
+  traefik-kubernetes-crd:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-10-05T23:54:22.799702871Z"
+    description: Traefik Kubernetes CRD for k3s
+    digest: fed11b3bc74119b5583955cb77e4ee55c04cefdb7305cb7462d689fe6636ee14
+    home: https://traefik.io
+    maintainers:
+    - email: contact@himelrana.com
+      name: Himel
+    name: traefik-kubernetes-crd
+    type: application
+    urls:
+    - https://charts.himelrana.com/repo/traefik-kubernetes-crd-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-10-05T23:54:22.794913639Z"
