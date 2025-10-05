@@ -50,7 +50,7 @@ entries:
   traefik-forward-auth:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-05T23:47:06.55400896Z"
+    created: "2025-10-05T23:47:18.846214845Z"
     description: A Helm chart for Kubernetes
     digest: 3fe2363cc311f19420bed4c7fc69ac82875f68db08280de013c019153ef4e29e
     name: traefik-forward-auth
@@ -58,4 +58,4 @@ entries:
     urls:
     - https://charts.himelrana.com/repo/traefik-forward-auth-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-05T23:47:06.553033007Z"
+generated: "2025-10-05T23:47:18.845846502Z"
