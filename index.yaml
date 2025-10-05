@@ -25,7 +25,7 @@ entries:
   redis-with-commander:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-05T23:46:31.287471881Z"
+    created: "2025-10-05T23:46:42.763453315Z"
     description: A Helm chart for Redis with Redis Commander
     digest: 53b2828c959d632d209837e1cf1cb678a229f77e58773e3a04999792798f4f87
     maintainers:
@@ -39,7 +39,7 @@ entries:
   traefik-crds:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-05T23:46:31.288087386Z"
+    created: "2025-10-05T23:46:42.764038569Z"
     description: Traefik custom resource definitions for my kubernetes cluster
     digest: 0e779ef4d30b5d0fddf8d984ffee17be68f63bd2cb46497808c51f1ab18028ef
     name: traefik-crds
@@ -50,7 +50,7 @@ entries:
   traefik-forward-auth:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-05T23:46:31.28831338Z"
+    created: "2025-10-05T23:46:42.764232912Z"
     description: A Helm chart for Kubernetes
     digest: 3fe2363cc311f19420bed4c7fc69ac82875f68db08280de013c019153ef4e29e
     name: traefik-forward-auth
@@ -58,4 +58,4 @@ entries:
     urls:
     - https://charts.himelrana.com/repo/traefik-forward-auth-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-05T23:46:31.286838854Z"
+generated: "2025-10-05T23:46:42.762994246Z"
