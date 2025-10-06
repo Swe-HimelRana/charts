@@ -23,11 +23,11 @@ jobs:
         run: |
           echo "| Chart Name | Version | Description |" > available-charts.md
           echo "|-------------|----------|-------------|" >> available-charts.md
-
+      
           for chart in repo/*.tgz; do
             name=$(helm show chart "$chart" | grep '^name:' | awk '{print $2}')
             version=$(helm show chart "$chart" | grep '^version:' | awk '{print $2}')
-            desc=$(helm show chart "$chart" | grep '^description:' | cut -d':' -f2- | xargs)
+            desc=$(helm show chart "$chart" | grep '^description:' | cut -d':' -f2- | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
             echo "| $name | $version | $desc |" >> available-charts.md
           done
 
