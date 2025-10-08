@@ -1,8 +1,7 @@
-| Chart Name | Version | Description |
-|-------------|----------|-------------|
-| cert-manager | v1.15.3 | A Helm chart for cert-manager |
-| cluster-issuer | 1.0.0 | Let's Encrypt ClusterIssuer |
-| forward-auth | 1.0.0 | Traefik Github Oauth2 Forward Auth |
-| kitedash | 1.0.0 | Kite Kubernetes Dashboard |
-| traefik-kubernetes-crd | 0.1.0 | Traefik Kubernetes CRD for k3s |
-| traefik-kubernetes-crd | 1.0.0 | Traefik Kubernetes CRD for k3s |
+| Chart Name | Version | Description | Recommended Namespace |
+|-------------|----------|-------------|------------------------|
+| cert-manager | v1.15.3 | A Helm chart for cert-manager | - |
+| cluster-issuer | 1.0.0 | Let's Encrypt ClusterIssuer | - |
+| forward-auth | 1.0.0 | Traefik Github Oauth2 Forward Auth | - |
+| kitedash | 1.0.0 | Kite Kubernetes Dashboard | - |
+| traefik-kubernetes-crd | 0.1.0 | Traefik Kubernetes CRD for k3s | - |
