@@ -56,7 +56,7 @@ entries:
   kitedash:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T21:30:46.899904303Z"
+    created: "2025-10-08T21:30:59.433379504Z"
     description: Kite Kubernetes Dashboard
     digest: ee800b779bef3b54eba899cb0bcdf0227ffb89e98615688b2fd43ab5ba01d38d
     name: kitedash
@@ -96,4 +96,4 @@ entries:
     urls:
     - https://charts.himelrana.com/repo/traefik-kubernetes-crd-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-08T21:30:46.899322066Z"
+generated: "2025-10-08T21:30:59.433008538Z"
