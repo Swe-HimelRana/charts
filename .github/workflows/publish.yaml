@@ -21,15 +21,22 @@ jobs:
 
       - name: Generate available-charts.md
         run: |
-          echo "| Chart Name | Version | Description |" > available-charts.md
-          echo "|-------------|----------|-------------|" >> available-charts.md
-      
+          echo "| Chart Name | Version | Description | Recommended Namespace |" > available-charts.md
+          echo "|-------------|----------|-------------|------------------------|" >> available-charts.md
+        
           for chart in repo/*.tgz; do
+            # Extract chart metadata
             name=$(helm show chart "$chart" | grep '^name:' | awk '{print $2}')
             version=$(helm show chart "$chart" | grep '^version:' | awk '{print $2}')
             desc=$(helm show chart "$chart" | grep '^description:' | cut -d':' -f2- | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-            echo "| $name | $version | $desc |" >> available-charts.md
+            ns=$(helm show chart "$chart" | grep '^recommendedNamespace:' | awk '{print $2}')
+        
+            # Default if missing
+            ns=${ns:-"-"}
+        
+            echo "| $name | $version | $desc | $ns |" >> available-charts.md
           done
+
 
       # 🧩 Generate index.yaml in root, but reference packages inside /repo/
       - name: Generate index.yaml in repo root
