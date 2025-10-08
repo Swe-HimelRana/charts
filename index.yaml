@@ -8,6 +8,38 @@ entries:
       artifacthub.io/signKey: |
         fingerprint: 1020CF3C033D4F35BAE1C19E1226061C665DF13E
         url: https://cert-manager.io/public-keys/cert-manager-keyring-2021-09-20-1020CF3C033D4F35BAE1C19E1226061C665DF13E.gpg
+      category: SSL Certificate
+      recommendedNamespace: cert-manager
+    apiVersion: v2
+    appVersion: v1.19.0
+    created: "2025-10-08T23:58:15.516752413Z"
+    description: A Helm chart for cert-manager
+    digest: 7d6d9b05175e742f32e22d7733b8dfa3394adaa732d6fa24a7b196de67f8c7bd
+    home: https://cert-manager.io
+    icon: https://raw.githubusercontent.com/cert-manager/community/4d35a69437d21b76322157e6284be4cd64e6d2b7/logo/logo-small.png
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    kubeVersion: '>= 1.22.0-0'
+    maintainers:
+    - email: cert-manager-maintainers@googlegroups.com
+      name: cert-manager-maintainers
+      url: https://cert-manager.io
+    name: cert-manager
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - https://charts.himelrana.com/repo/cert-manager-v1.19.0.tgz
+    version: v1.19.0
+  - annotations:
+      artifacthub.io/category: security
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/signKey: |
+        fingerprint: 1020CF3C033D4F35BAE1C19E1226061C665DF13E
+        url: https://cert-manager.io/public-keys/cert-manager-keyring-2021-09-20-1020CF3C033D4F35BAE1C19E1226061C665DF13E.gpg
     apiVersion: v2
     appVersion: v1.15.3
     created: "2025-10-08T21:30:11.61241369Z"
@@ -37,7 +69,7 @@ entries:
       recommendedNamespace: default
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T21:32:45.8391273Z"
+    created: "2025-10-08T23:58:15.516908025Z"
     description: Let's Encrypt ClusterIssuer
     digest: 340d99aab3d0aa5d1ec13fa0f4ed1d5bcbf52b09011b30398108ee2ec564950f
     name: cluster-issuer
@@ -51,7 +83,7 @@ entries:
       recommendedNamespace: forward-auth
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T21:32:45.839364072Z"
+    created: "2025-10-08T23:58:15.517110895Z"
     description: Traefik Github Oauth2 Forward Auth
     digest: b7db06e5140b788998b9faf803c2ed14af8bd06f668a82d07ca2186df7616c04
     name: forward-auth
@@ -65,7 +97,7 @@ entries:
       recommendedNamespace: kube-system
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T21:32:45.839571248Z"
+    created: "2025-10-08T23:58:15.517306421Z"
     description: Kite Kubernetes Dashboard
     digest: 4e07e1b8795172c111d33899cc07f082dafcda55dab45fba5e446ff3b71ae0d8
     name: kitedash
@@ -79,7 +111,7 @@ entries:
       recommendedNamespace: kube-system
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T21:32:45.840177729Z"
+    created: "2025-10-08T23:58:15.518220443Z"
     description: Traefik Kubernetes CRD for k3s
     digest: 215ab62b4f744011935cc30457063464c10bc7ce2729ca120d901117a3c8be9d
     home: https://traefik.io
@@ -105,4 +137,4 @@ entries:
     urls:
     - https://charts.himelrana.com/repo/traefik-kubernetes-crd-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-08T21:32:45.838821981Z"
+generated: "2025-10-08T23:58:15.511381159Z"
