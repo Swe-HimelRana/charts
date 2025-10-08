@@ -32,33 +32,42 @@ entries:
     - https://charts.himelrana.com/repo/cert-manager-v1.15.3.tgz
     version: v1.15.3
   cluster-issuer:
-  - apiVersion: v2
+  - annotations:
+      category: k3s
+      recommendedNamespace: default
+    apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T21:30:23.911727799Z"
+    created: "2025-10-08T21:32:45.8391273Z"
     description: Let's Encrypt ClusterIssuer
-    digest: 035d2ef1b80fb5d9398a5b4ea1d3f0f60b7754b52dd9077488531f9fbc7ea3a6
+    digest: 340d99aab3d0aa5d1ec13fa0f4ed1d5bcbf52b09011b30398108ee2ec564950f
     name: cluster-issuer
     type: application
     urls:
     - https://charts.himelrana.com/repo/cluster-issuer-1.0.0.tgz
     version: 1.0.0
   forward-auth:
-  - apiVersion: v2
+  - annotations:
+      category: oauth2
+      recommendedNamespace: forward-auth
+    apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T21:30:46.89969924Z"
+    created: "2025-10-08T21:32:45.839364072Z"
     description: Traefik Github Oauth2 Forward Auth
-    digest: c43e683016aa3ef14051d564af81b90641a53146fff007ff7f182ce59019ba99
+    digest: b7db06e5140b788998b9faf803c2ed14af8bd06f668a82d07ca2186df7616c04
     name: forward-auth
     type: application
     urls:
     - https://charts.himelrana.com/repo/forward-auth-1.0.0.tgz
     version: 1.0.0
   kitedash:
-  - apiVersion: v2
+  - annotations:
+      category: k3s
+      recommendedNamespace: kube-system
+    apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T21:30:59.433379504Z"
+    created: "2025-10-08T21:32:45.839571248Z"
     description: Kite Kubernetes Dashboard
-    digest: ee800b779bef3b54eba899cb0bcdf0227ffb89e98615688b2fd43ab5ba01d38d
+    digest: 4e07e1b8795172c111d33899cc07f082dafcda55dab45fba5e446ff3b71ae0d8
     name: kitedash
     type: application
     urls:
@@ -66,13 +75,13 @@ entries:
     version: 1.0.0
   traefik-kubernetes-crd:
   - annotations:
-      ategory: traefik
+      category: traefik
       recommendedNamespace: kube-system
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T20:38:34.488775189Z"
+    created: "2025-10-08T21:32:45.840177729Z"
     description: Traefik Kubernetes CRD for k3s
-    digest: 61f065840a296bd35afda22516fc6cb115929ffd4c1d22de34d860ed6f6d81cb
+    digest: 215ab62b4f744011935cc30457063464c10bc7ce2729ca120d901117a3c8be9d
     home: https://traefik.io
     maintainers:
     - email: contact@himelrana.com
@@ -96,4 +105,4 @@ entries:
     urls:
     - https://charts.himelrana.com/repo/traefik-kubernetes-crd-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-08T21:30:59.433008538Z"
+generated: "2025-10-08T21:32:45.838821981Z"
