@@ -10,7 +10,7 @@ entries:
         url: https://cert-manager.io/public-keys/cert-manager-keyring-2021-09-20-1020CF3C033D4F35BAE1C19E1226061C665DF13E.gpg
     apiVersion: v2
     appVersion: v1.15.3
-    created: "2025-10-08T20:37:49.305951462Z"
+    created: "2025-10-08T20:38:34.487634724Z"
     description: A Helm chart for cert-manager
     digest: 016e68d9f7083d2c4fd302f951ee6490dbf4cb1ef44cfc06914c39cbfb01d858
     home: https://cert-manager.io
@@ -34,7 +34,7 @@ entries:
   cluster-issuer:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T20:37:49.306091795Z"
+    created: "2025-10-08T20:38:34.487779904Z"
     description: Let's Encrypt ClusterIssuer
     digest: 035d2ef1b80fb5d9398a5b4ea1d3f0f60b7754b52dd9077488531f9fbc7ea3a6
     name: cluster-issuer
@@ -45,7 +45,7 @@ entries:
   forward-auth:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T20:37:49.306286359Z"
+    created: "2025-10-08T20:38:34.487996117Z"
     description: Traefik Github Oauth2 Forward Auth
     digest: c43e683016aa3ef14051d564af81b90641a53146fff007ff7f182ce59019ba99
     name: forward-auth
@@ -56,7 +56,7 @@ entries:
   kitedash:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T20:37:49.306487716Z"
+    created: "2025-10-08T20:38:34.48819092Z"
     description: Kite Kubernetes Dashboard
     digest: ee800b779bef3b54eba899cb0bcdf0227ffb89e98615688b2fd43ab5ba01d38d
     name: kitedash
@@ -65,11 +65,14 @@ entries:
     - https://charts.himelrana.com/repo/kitedash-1.0.0.tgz
     version: 1.0.0
   traefik-kubernetes-crd:
-  - apiVersion: v2
+  - annotations:
+      ategory: traefik
+      recommendedNamespace: kube-system
+    apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-08T00:34:01.609682774Z"
+    created: "2025-10-08T20:38:34.488775189Z"
     description: Traefik Kubernetes CRD for k3s
-    digest: 902eb59aa393b0620eb713878c6351ebc5ab55b2689b9b10e30947e6c227e764
+    digest: 61f065840a296bd35afda22516fc6cb115929ffd4c1d22de34d860ed6f6d81cb
     home: https://traefik.io
     maintainers:
     - email: contact@himelrana.com
@@ -93,4 +96,4 @@ entries:
     urls:
     - https://charts.himelrana.com/repo/traefik-kubernetes-crd-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-08T20:37:49.30197382Z"
+generated: "2025-10-08T20:38:34.483566774Z"
