@@ -12,7 +12,7 @@ entries:
       recommendedNamespace: cert-manager
     apiVersion: v2
     appVersion: v1.19.0
-    created: "2025-10-11T00:45:35.248704253Z"
+    created: "2025-10-12T20:56:19.825791543Z"
     description: A Helm chart for cert-manager
     digest: 7d6d9b05175e742f32e22d7733b8dfa3394adaa732d6fa24a7b196de67f8c7bd
     home: https://cert-manager.io
@@ -69,7 +69,7 @@ entries:
       recommendedNamespace: default
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-11T00:45:35.248850628Z"
+    created: "2025-10-12T20:56:19.825965169Z"
     description: Let's Encrypt ClusterIssuer
     digest: 340d99aab3d0aa5d1ec13fa0f4ed1d5bcbf52b09011b30398108ee2ec564950f
     name: cluster-issuer
@@ -82,8 +82,32 @@ entries:
       category: oauth2
       recommendedNamespace: forward-auth
     apiVersion: v2
+    appVersion: 1.4.0
+    created: "2025-10-12T20:56:19.827109857Z"
+    description: Traefik Github OAuth2 Forward Auth
+    digest: d579cd552545e48ea297ed00503f304234f31dc35b6e9e7a2b4108e8cf50fe01
+    home: https://github.com/swe-himelrana/forwardauth
+    keywords:
+    - traefik
+    - oauth2
+    - github
+    - forward-auth
+    maintainers:
+    - email: himelrana@example.com
+      name: Himel Rana
+    name: forward-auth
+    sources:
+    - https://github.com/swe-himelrana/forwardauth
+    type: application
+    urls:
+    - https://charts.himelrana.com/repo/forward-auth-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      category: oauth2
+      recommendedNamespace: forward-auth
+    apiVersion: v2
     appVersion: 1.2.0
-    created: "2025-10-11T00:45:35.249667483Z"
+    created: "2025-10-12T20:56:19.826731517Z"
     description: Traefik Github Oauth2 Forward Auth
     digest: 35c67c01f1d94dcbc55c01dc11ad55c0d1b1277e61628c7debf1b9645ce8face
     name: forward-auth
@@ -96,7 +120,7 @@ entries:
       recommendedNamespace: forward-auth
     apiVersion: v2
     appVersion: 1.2.0
-    created: "2025-10-11T00:45:35.24948525Z"
+    created: "2025-10-12T20:56:19.826541631Z"
     description: Traefik Github Oauth2 Forward Auth
     digest: d0136b7fdf98d9ca7ad69a98321eb57f8d6f041b5a599e9c6351134eb301920e
     name: forward-auth
@@ -109,7 +133,7 @@ entries:
       recommendedNamespace: forward-auth
     apiVersion: v2
     appVersion: 1.2.0
-    created: "2025-10-11T00:45:35.249291266Z"
+    created: "2025-10-12T20:56:19.826356824Z"
     description: Traefik Github Oauth2 Forward Auth
     digest: 669d1e97ea1228a139f652054048c49a02e50e41c0ae144d5a6a519e3d600ecd
     name: forward-auth
@@ -122,7 +146,7 @@ entries:
       recommendedNamespace: forward-auth
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-11T00:45:35.249093755Z"
+    created: "2025-10-12T20:56:19.826166838Z"
     description: Traefik Github Oauth2 Forward Auth
     digest: b7db06e5140b788998b9faf803c2ed14af8bd06f668a82d07ca2186df7616c04
     name: forward-auth
@@ -136,7 +160,7 @@ entries:
       recommendedNamespace: kube-system
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-11T00:45:35.249854023Z"
+    created: "2025-10-12T20:56:19.827302949Z"
     description: Kite Kubernetes Dashboard
     digest: 4e07e1b8795172c111d33899cc07f082dafcda55dab45fba5e446ff3b71ae0d8
     name: kitedash
@@ -150,7 +174,7 @@ entries:
       recommendedNamespace: kube-system
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-11T00:45:35.25049102Z"
+    created: "2025-10-12T20:56:19.827896643Z"
     description: Traefik Kubernetes CRD for k3s
     digest: 215ab62b4f744011935cc30457063464c10bc7ce2729ca120d901117a3c8be9d
     home: https://traefik.io
@@ -176,4 +200,4 @@ entries:
     urls:
     - https://charts.himelrana.com/repo/traefik-kubernetes-crd-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-11T00:45:35.243368323Z"
+generated: "2025-10-12T20:56:19.820383469Z"
